@@ -47,10 +47,18 @@ This project was born from a personal challenge - the frustration of feeling lik
 - Flask
 
 ## Project Structure
-├── app.py # Main application file 
-├── requirements.txt # Python dependencies 
-├── static/ # Static assets (CSS, JS, images) │ ├── css/ # Stylesheets │ │ └── styles.css │ ├── js/ # JavaScript files │ │ └── script.js │ └── images/ # Images used in the project │ └── logo.png ├── templates/ # HTML templates for the app │ ├── base.html # Base HTML template │ └── index.html # Homepage template ├── README.md # Project documentation ├── .gitignore # Files and directories to ignore in Git └── LICENSE # License for the project
+```
+FlexiPlanner/
+├── app.py/
+├── requirements.txt
+├── README.md
+├── templates/
+│   ├── index.html/
+│   ├── schedule.html/
+└── static/
+    ├── style.css
 
+```
 
 
 ### Installation
