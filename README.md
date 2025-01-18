@@ -8,14 +8,14 @@
 [![Python](https://img.shields.io/badge/Python-3.7+-blue?style=flat-square&logo=python)](https://www.python.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-2.2+-blue?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 
-*Don't let a late start ruin your entire day!*
+<strong> The Motto - *Don't let a late start ruin your entire day!* </strong>
 
 </div>
 
 ## 📖 About The Project
 
 FlexiPlanner - The Dynamic Wake-Up Scheduler is a web application that helps you salvage your day even when you wake up later than planned. Instead of feeling demotivated about missing your ideal wake-up time, this tool helps you create an adjusted schedule and make the most of your remaining day.
-- I Love to call every Project a "Product" and always aim to make one.
+- *I Love to call every Project a "Product" and always aim to make one.*
 
 ### 🌟 The Story Behind
 
@@ -45,6 +45,13 @@ This project was born from a personal challenge - the frustration of feeling lik
 - Python 3.10 or higher
 - pip (Python package manager)
 - Flask
+
+## Project Structure
+├── app.py # Main application file 
+├── requirements.txt # Python dependencies 
+├── static/ # Static assets (CSS, JS, images) │ ├── css/ # Stylesheets │ │ └── styles.css │ ├── js/ # JavaScript files │ │ └── script.js │ └── images/ # Images used in the project │ └── logo.png ├── templates/ # HTML templates for the app │ ├── base.html # Base HTML template │ └── index.html # Homepage template ├── README.md # Project documentation ├── .gitignore # Files and directories to ignore in Git └── LICENSE # License for the project
+
+
 
 ### Installation
 
@@ -101,16 +108,19 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 👤 Contact
 
-Pritam - [@iPritamSaha09](https://twitter.com/your_twitter)
+- Pritam's X(Twitter) - [@iPritamSaha09](https://x.com/iPritamSaha09)
+- Pritam's LinkedIn - [@pritamsaha09](https://www.linkedin.com/in/pritamsaha09/)
 
 Project Link: [https://github.com/Pritam-Stats/FlexiPlanner](https://github.com/Pritam-Stats/FlexiPlanner)
+
+Mail me - @[contact.with.pritam@gmail.com](https://gmail.com/mailto:contact.with.pritam@gmail.com)
 
 ---
 
 <div align="center">
 
-**Built with determination in a 15-hour coding marathon** 🚀
+**Built with determination in a 15-hour non stop coding session** 🚀
 
-⭐ Don't forget to star this repo if you found it helpful!
+⭐ Don't forget to star this repo if you found it helpful! ⭐
 
 </div>
