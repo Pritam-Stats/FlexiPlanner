@@ -8,7 +8,7 @@
 [![Python](https://img.shields.io/badge/Python-3.7+-blue?style=flat-square&logo=python)](https://www.python.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-2.2+-blue?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 
-<h2> ```  The Motto - Don't let a late start ruin your entire day!  ``` </h2>
+<h2>  The Motto - Don't let a "Late Start" ruin your entire day! </h2>
 
 </div>
 
