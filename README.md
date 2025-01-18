@@ -8,7 +8,7 @@
 [![Python](https://img.shields.io/badge/Python-3.7+-blue?style=flat-square&logo=python)](https://www.python.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-2.2+-blue?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 
-<strong> The Motto - *Don't let a late start ruin your entire day!* </strong>
+``` <strong> The Motto - *Don't let a late start ruin your entire day!* </strong> ```
 
 </div>
 
@@ -119,9 +119,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - Pritam's X(Twitter) - [@iPritamSaha09](https://x.com/iPritamSaha09)
 - Pritam's LinkedIn - [@pritamsaha09](https://www.linkedin.com/in/pritamsaha09/)
 
-Project Link: [https://github.com/Pritam-Stats/FlexiPlanner](https://github.com/Pritam-Stats/FlexiPlanner)
+- Mail me - [@contact.with.pritam@gmail.com](mailto:contact.with.pritam@gmail.com)
 
-Mail me - @[contact.with.pritam@gmail.com](https://gmail.com/mailto:contact.with.pritam@gmail.com)
+*Project Link: [https://github.com/Pritam-Stats/FlexiPlanner](https://github.com/Pritam-Stats/FlexiPlanner)*
 
 ---
 
