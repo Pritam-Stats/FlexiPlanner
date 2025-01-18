@@ -121,7 +121,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 - Mail me - [@contact.with.pritam@gmail.com](mailto:contact.with.pritam@gmail.com)
 
-*Project Link: [https://github.com/Pritam-Stats/FlexiPlanner](https://github.com/Pritam-Stats/FlexiPlanner)*
+*Project Link: [Visit the WebApp](https://flexiplanner.onrender.com/)*
 
 ---
 
