@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Smart Scheduler</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/all.min.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+    <!-- For mobile devices -->
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <!-- For Windows -->
+    <meta name="msapplication-TileImage" content="ms-icon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <link rel="icon" href="/assets/icons/favicon_io/favicon.ico" type="image/x-icon">
+
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Typing effect animation */
+        .typing-effect {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #2d3748; /* Dark Gray Text */
+            overflow: hidden; /* Ensures the text is hidden until typed */
+            border-right: 0.15em solid black; /* Simulates the cursor */
+            white-space: nowrap; /* Prevents text from wrapping */
+            width: 0; /* Initially hides text */
+            animation: typing 5s steps(40) 1s 1 normal both, blink 0.75s step-end infinite;
+        }
+
+        /* Keyframes for typing effect */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Keyframes for the blinking cursor */
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        /* Positioning the typing effect on the side */
+        .side-text {
+            position: fixed;
+            top: 20%;
+            left: 5%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        .footer-text {
+            position: relative;
+            bottom: 2%;
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+            opacity: 2;
+            animation: fadeIn 2s forwards;
+        }
+
+        /* Styling for the footer */
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: 1rem 0;
+            font-size: 1.2rem;
+            color: #4a5568;
+        }
+
+        footer a {
+            color: inherit;
+        }
+
+        footer a:hover {
+            color: #4a90e2;
+        }
+
+        footer {
+            position: fixed;
+            
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 1.2rem;
+            color: #4a5568;
+        }
+
+        @font-face {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+        }
+        @font-face {
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+        }
+        @font-face {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+        }
+
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-800 via-slate-600 to-gray-900 text-gray-800 min-h-screen">
+    <div class="flex flex-col items-center justify-center min-h-screen p-4 fade-in">
+        <h1 class="text-4xl font-extrabold text-gray-300 mb-6">Your Personalized Schedule</h1>
+        <div class="bg-gradient-to-br from-slate-700 via-slate-600 to-slate-800 text-gray-800 shadow-xl rounded-lg w-full max-w-2xl p-6 border border-slate-400">
+            <p class="text-lg font-medium text-slate-200 mb-4">
+                <strong>Wake-Up Time:</strong> {{ wakeup_time }} (in Hrs)
+            </p>
+            <ul class="space-y-4 w-full max-w-2xl">
+                {% for item in schedule %}
+                <li class="flex items-center bg-gradient-to-r from-slate-800/90 to-slate-800/50 
+    p-4 rounded-lg shadow-lg border border-slate-700/50 
+    hover:bg-slate-700/60 hover:border-slate-600
+    transition-all duration-300 ease-in-out fade-in">
+        <div class="flex flex-col">
+        <span class="font-outfit text-base font-semibold 
+                text-slate-100 tracking-wide leading-snug
+                hover:text-cyan-300 transition-colors duration-200">
+            {{ item }}
+        </span>
+        <span class="font-space-grotesk text-sm text-slate-400 
+                tracking-wider uppercase mt-0.5">
+            Task Details
+        </span>
+    </div>
+                </li>
+                {% endfor %}
+        </div>
+        <a href="/" 
+        class="mt-5 bg-gradient-to-r from-cyan-700 to-blue-800 text-white px-6 py-2 rounded-lg 
+        shadow-lg hover:from-cyan-600 hover:to-blue-700 
+        transition duration-300 font-outfit tracking-wide fade-in">
+    Go Back
+</a>
+    </div>
+
+    <!-- Footer with typing effect -->
+        <!-- Side text with typing effect -->
+    <div class="footer-text">
+    <p class="typing-effect">
+        <span style="color: #a9acac; font-size: large;">
+            With 
+                <strong style="color: #e23030;">
+                    Passion
+                </strong>, 
+            Designed & 
+        </span>
+        <strong style="color: #f4f5f7; font-style: italic;">
+            Developed
+        </strong> 
+        <span style="color: rgb(219, 219, 211); font-size: large;">by</span>
+        <strong style="color: #6ba4e0; font-size: larger; font-family: 'fantasy', Courier, monospace#a9acac;">
+            Pritam
+        </strong>
+    </p>
+</div>
+
+
+    <footer class="fixed top-9 right-5 flex gap-5 text-gray-400 text-3xl">
+    <a href="https://github.com/Pritam-Stats" target="_blank" class="hover:text-gray-500 transition transform hover:scale-125">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="https://x.com/iPritamSaha09" target="_blank" class="hover:text-blue-400 transition transform hover:scale-125">
+        <i class="fab fa-twitter"></i>
+    </a>
+</footer>
+
+</body>
+</html>

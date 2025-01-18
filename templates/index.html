@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexi-Planner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Styling the time input and its clock icon */
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            background: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234B5563' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='12 6 12 12 16 14'%3E%3C/polyline%3E%3C/svg%3E");
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        
+        input[type="time"]::-webkit-calendar-picker-indicator:hover {
+            opacity: 1.5;
+            
+            
+        }
+
+
+    
+        footer a:hover{
+            color: rgb(123, 140, 218);
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body class="bg-gradient-to-br from-blue-300 via-slate-300 to-gray-300 min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 py-12">
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-blue-800 mb-4">Wake-Up Scheduler</h1>
+            <p class="text-lg text-gray-600">Don't let a late start ruin your entire day</p>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+            <!-- Form Section -->
+            <div class="bg-gradient-to-br text-gray-200 rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6">Get Your Schedule</h2>
+                <form action="/" method="POST">
+                    <label for="time_input" class="block text-lg font-medium text-gray-700 mb-2">
+                        When did you wake up?
+                    </label>
+                    <input 
+                        type="time" 
+                        id="time_input" 
+                        name="time_input" 
+                        placeholder="Select Time 👉🏾"
+                        class="block w-full px-4 py-3 border-2 border-gray-300 rounded-lg 
+                            focus:ring-2 focus:ring-blue-500 focus:border-blue-400 
+                            hover:border-blue-400 hover:shadow-md
+                            transition-all duration-300 ease-in-out
+                            transform hover:scale-102
+                            bg-gray-350 hover:bg-gray-300
+                            text-xl text-gray-700 font-normal cursor-text pr-5 placeholder-gray-400"
+                        required>
+                        
+                    <button 
+                        type="submit" 
+                        class="mt-6 w-full bg-blue-700 hover:bg-blue-900 text-white font-medium py-3 px-6 rounded-lg transition duration-200 transform hover:scale-105 cursor-pointer">
+                        Create My Schedule
+                    </button>
+                </form>
+                {% if error %}
+                <p class="mt-4 text-red-500 text-center">{{ error }}</p>
+                {% endif %}
+            </div>
+
+            <!-- Story Section -->
+            <div class="bg-gradient-to-br bg-blue-50 rounded-xl p-6 md:p-8">
+                <h2 class="text-2xl font-semibold text-blue-800 mb-4">The Story Behind</h2>
+                <div class="space-y-4 text-gray-700">
+                    <p style="font-family: sans-serif; font-weight: 600;">
+                        This is my first ever project, built using Python, Flask, HTML, and some Tailwind CSS. It's a solution to a personal challenge I faced - the frustration of feeling like my whole day was wasted just because I woke up an hour late than planned.
+                    </p>
+                    <p style="font-family: sans-serif; font-weight: 600;">
+                        What started as a simple idea turned into an intense 15-hour coding marathon (from 10 PM to 2 PM the next day!). While it may seem simple, every line of code represents my learning journey and determination to solve a real problem.
+                    </p>
+                    <div class="mt-6 bg-gradient-to-br text-gray-600 rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-blue-800 mb-2">Future Plans</h3>
+                        <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 500;">
+                            While this version is basic, I have plans to expand it into a fully AI-powered scheduling assistant with advanced features and functionalities. Your feedback and support will help shape its future!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-12">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Made with ❤️</h3>
+                    <p>Flask • Python • HTML • Tailwind CSS</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Developer</h3>
+                    <p>&copy; 2025 Pritam</p>
+                    <p>The First Project and Behind Story</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Connect</h3>
+                    <p><a href="https://github.com/Pritam-Stats" target="_blank">GitHub</a> • <a target="_blank" href="https://x.com/iPritamSaha09">X (Twitter)</a> • <a target="_blank" href="https://www.linkedin.com/in/pritamsaha09/">LinkedIn</a> </p>
+                    <p>Do Share your feedback!</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-700 text-center">
+                <p class="text-sm">Developed with determination through a 15-hour long coding session 🚀</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
