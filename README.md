@@ -42,8 +42,9 @@ This project was born from a personal challenge - the frustration of feeling lik
 
 ### Prerequisites
 
-- Python 3.7 or higher
+- Python 3.10 or higher
 - pip (Python package manager)
+- Flask
 
 ### Installation
 
